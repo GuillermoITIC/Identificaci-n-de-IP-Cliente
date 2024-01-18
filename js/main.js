@@ -1,7 +1,7 @@
 //alert ("Hola mundo");
-let IP=document.getElementById("IP");
-let Pais=document.getElementById("Pais");
-let Continente=document.getElementById("Continente");
+let ip=document.getElementById("ip");
+let pais=document.getElementById("pais");
+let continente=document.getElementById("continente");
 let zona_horaria=document.getElementById("zona_horaria");
 
 
@@ -11,13 +11,13 @@ const SolicitudAPI = () => {
   
   // Tu código aquí
 };
-axios.get('la url del trabajo 2.4')
+axios.get('https://iot-mhag-01.000webhostapp.com/php-geoip-api/index.php')
   .then(function (response) {
     // manejar respuesta exitosa
     console.log(response.data);
-    IP.innerHTML = response.data.IP;
-    Pais.innerHTML = response.data.Pais;
-    Continente.innerHTML = response.data.Continente;
+    ip.innerHTML = response.data.ip;
+    pais.innerHTML = response.data.pais;
+    continente.innerHTML = response.data.continente;
     zona_horaria.innerHTML = response.data.zona_horaria;
   })
   .catch(function (error) {
